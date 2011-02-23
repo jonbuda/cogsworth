@@ -7,8 +7,8 @@ The name of this gem is derived from *Cogsworth*, the character from Beauty and 
 ## Usage
 
     Cogsworth.parse('2 hours 30 minutes') => 9000
-    
-    Cogsworth.unparse(142510) => '1d 15h 35m 10s
+
+    Cogsworth.unparse(142510) => '1d 15h 35m 10s'
     
 ## Acceptable Formats
 
