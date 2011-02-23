@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jon buda"]
   s.email       = ["jon.buda@gmail.com"]
-  s.homepage    = "http://jonbuda.com"
+  s.homepage    = "https://github.com/jonbuda/cogsworth"
   s.summary     = %q{A simple natural language time parser for Ruby}
   s.description = %q{A simple natural language time parser for Ruby}
 

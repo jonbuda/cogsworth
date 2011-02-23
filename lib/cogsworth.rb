@@ -13,15 +13,15 @@ module Cogsworth
       end
     end
     
-    def unparse(seconds, strings=[])
-      return strings.join(' ') if seconds == 0
+    def unparse(seconds, results=[])
+      return results.join(' ') if seconds == 0
       
       ['d','h','m','s'].each do |unit|
-        times = seconds/MULTIPLIERS[unit]
-        return unparse(seconds%MULTIPLIERS[unit], strings << "#{times}#{unit}") if times > 0
+        occurrences = seconds/MULTIPLIERS[unit]
+        return unparse(seconds%MULTIPLIERS[unit], results.push("#{occurrences}#{unit}")) if occurrences > 0
       end
       
-      return unparse(seconds, strings)
+      return unparse(seconds, results)
     end
   end
 end
