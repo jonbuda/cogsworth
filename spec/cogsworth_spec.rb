@@ -48,6 +48,10 @@ describe Cogsworth do
   end
   
   describe "converting seconds into a formatted string" do
+    it "converts 30 seconds to 30s'" do
+      Cogsworth.unparse(30).should == '30s'
+    end
+    
     it "converts 60 seconds to '1m'" do
       Cogsworth.unparse(60).should == '1m'
     end
@@ -56,8 +60,24 @@ describe Cogsworth do
       Cogsworth.unparse(120).should == '2m'
     end
     
+    it "converts 150 seconds to '2m 30s'" do
+      Cogsworth.unparse(150).should == '2m 30s'
+    end
+    
+    it "converts 156 seconds to '2m 36s'" do
+       Cogsworth.unparse(156).should == '2m 36s'
+     end
+    
     it "converts 3600 seconds to '1h'" do
       Cogsworth.unparse(3600).should == '1h'
+    end
+    
+    it "converts 86400 seconds to '1d'" do
+      Cogsworth.unparse(86400).should == '1d'
+    end
+    
+    it "converts 142510 seconds to '1d 15h 35m 10s'" do
+      Cogsworth.unparse(142510).should == '1d 15h 35m 10s'
     end
   end
 end
