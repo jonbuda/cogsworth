@@ -6,11 +6,11 @@ The name of this gem is derived from *Cogsworth*, the character from Beauty and 
 
 ## Usage
 
-    Cogsworth.parse('2 hours 30 minutes') => 9000
+    Cogsworth.string_to_seconds('2 hours 30 minutes') => 9000
 
-    Cogsworth.unparse(142510) => '1d 15h 35m 10s'
+    Cogsworth.seconds_to_string(142510) => '1d 15h 35m 10s'
     
-## Acceptable Formats
+## Acceptable String Formats
 
     '2 days 1 hour 35 minutes 25 seconds'
     '2days 1hr 35min 25sec'
